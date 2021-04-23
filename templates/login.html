@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h3 align="center">{{title}}</h3>
+{% if lp == "ol"%}
+<ol>
+    {% for el in li%}
+    <li>{{ el }}</li>
+    {% endfor %}
+</ol>
+{% elif lp == "ul"%}
+<ul>
+    {% for el in li%}
+    <li>{{ el }}</li>
+    {% endfor %}
+</ul>
+{% else %}
+<h4>Oops, something went wrong...</h4>
+{% endif %}
+{% endblock %}
